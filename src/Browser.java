@@ -15,11 +15,10 @@ public class Browser extends JFrame {
 	private static final long serialVersionUID = 2954326234544882086L;
 
 	public void buildGUI() {		
-		DBConnection connection = new DBConnection();
-		ResultSet results = connection.read("http://localhost:3030/ds/query", "SELECT ?subject ?predicate ?object WHERE {?subject ?predicate ?object}");
+		
 		
 		//local variables
-		TableView table = new TableView(results);
+		TableView table = new TableView();
 		JSplitPane splitPane = new JSplitPane();
 		splitPane.add(table,JSplitPane.RIGHT);
 				  
