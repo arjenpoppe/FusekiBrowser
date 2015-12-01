@@ -1,4 +1,6 @@
 import java.awt.BorderLayout;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -25,6 +27,8 @@ public class TableView extends JPanel{
 	    JTable table = new JTable(dataModel);
 	    JScrollPane scrollpane = new JScrollPane(table);
 	    add(scrollpane, BorderLayout.CENTER);
+	    table.addMouseListener(new TableMouseListener());
+	    table.setEnabled(false);
 	    
 	    while (results.hasNext()){
 	    	QuerySolution sol = results.next();
@@ -34,6 +38,14 @@ public class TableView extends JPanel{
 		    
 		    DefaultTableModel tableModel = (DefaultTableModel) table.getModel();
 			tableModel.addRow(new Object[] { subject, predicate, object });	
+			
+	    }
+	}
+	
+	class TableMouseListener extends MouseAdapter {
+		
+		public void mouseClicked(MouseEvent e) {
+            
 	    }
 	}
 	
