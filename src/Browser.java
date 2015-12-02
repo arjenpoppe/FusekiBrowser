@@ -4,6 +4,7 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JSplitPane;
+import javax.swing.JToolBar;
 
 import org.apache.jena.query.ResultSet;
 
@@ -25,6 +26,7 @@ public class Browser extends JFrame {
 		//add components and properties to frame 
 		setLayout(new BorderLayout());
 		add(splitPane, BorderLayout.CENTER);
+
 		setSize(1000, 600);
 		setMinimumSize(new Dimension(400, 300));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

@@ -1,7 +1,6 @@
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.ResultSet;
-import org.apache.jena.query.ResultSetFormatter;
 
 public class DBConnection {
 
@@ -11,7 +10,6 @@ public class DBConnection {
 		Model model = ModelFactory.createDefaultModel();
 		Resource resource = model.createResource("dshtrh.//sdfgdsfsgd").addProperty(VCARD.FN, "Arjen");
 		**/
-		
 	}
 	
 	public ResultSet read(String dataset, String query){
